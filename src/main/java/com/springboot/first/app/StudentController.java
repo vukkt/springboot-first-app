@@ -30,11 +30,15 @@ public class StudentController {
 	}
 
 	// http://localhost:8080/student/ramesh/fadatare
-	/// @Pathvariable annotation
+	/// @Pathvariable annotation no question mark (?)
 
 	@GetMapping("student/{firstName}/{lastName}") // URI template variable
 	public Student studentPathVariable(@PathVariable("firstName") String firstName,
 			@PathVariable("lastName") String lastName) {
 		return new Student(firstName, lastName);
 	}
+
+	// building rest API to handle query parameters
+	// http://localhost:8080/student?firstName=Ramesh //?firstName=Ramesh is query
+	// parameter
 }
