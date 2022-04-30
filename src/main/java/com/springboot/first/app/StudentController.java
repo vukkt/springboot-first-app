@@ -4,14 +4,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWordController {
+public class StudentController {
 
-	// GET HTTP Method
-	// http://localhost:8080/hello-world
+	// http://localhost:8080/student
 
-	@GetMapping("/hello-world")
-	public String helloWorld() {
-		return "Hello World!";
+	@GetMapping("/student")
+	public Student getStudent() {
+		return new Student("Ramesh", "Fadatare");
 	}
 
 }
